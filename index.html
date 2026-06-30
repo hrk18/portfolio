@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="index, follow" />
+  <title>Hrithik Kumar Chorwar — Cyber Security Analyst</title>
+  <meta name="description" content="Hrithik Kumar Chorwar — Cyber Security Analyst specialising in GRC, ISMS (ISO/IEC 27001) and penetration testing. Based in Melbourne, VIC." />
+  <meta name="author" content="Hrithik Kumar Chorwar" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hrithik Kumar Chorwar — Cyber Security Analyst" />
+  <meta property="og:description" content="GRC | ISMS | Penetration Testing. Cybersecurity graduate based in Melbourne." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;%F0%9F%9B%A1%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;" />
+  <style>
+    :root{
+      --bg:#0a0e14;
+      --bg-alt:#0e131c;
+      --panel:#111824;
+      --border:#1c2a3a;
+      --txt:#c7d3e0;
+      --txt-dim:#7d8da0;
+      --accent:#00ff9c;
+      --accent-dim:#0a9c64;
+      --accent2:#28c2ff;
+      --warn:#ff5f56;
+      --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+      --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg);color:var(--txt);font-family:var(--sans);
+      line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none;transition:color .2s}
+    a:hover{color:var(--accent2)}
+    ::selection{background:var(--accent);color:#04130c}
+
+    /* Matrix canvas backdrop */
+    #matrix{position:fixed;inset:0;z-index:0;opacity:.10;pointer-events:none}
+
+    .wrap{max-width:1040px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+
+    /* Nav */
+    header{position:sticky;top:0;z-index:50;background:rgba(10,14,20,.82);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .brand{font-family:var(--mono);font-weight:700;color:var(--accent);letter-spacing:.5px;font-size:.95rem}
+    .brand .c{color:var(--txt-dim)}
+    .nav-links{display:flex;gap:26px;font-family:var(--mono);font-size:.82rem}
+    .nav-links a{color:var(--txt-dim)}
+    .nav-links a:hover{color:var(--accent)}
+    .menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--accent);
+      font-family:var(--mono);padding:6px 10px;border-radius:6px;cursor:pointer}
+
+    /* Hero */
+    .hero{min-height:calc(100vh - 60px);display:flex;align-items:center;padding:60px 0}
+    .term{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+      box-shadow:0 24px 60px -20px rgba(0,0,0,.7);overflow:hidden;width:100%}
+    .term-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;
+      background:var(--bg-alt);border-bottom:1px solid var(--border)}
+    .dot{width:12px;height:12px;border-radius:50%}
+    .dot.r{background:#ff5f56}.dot.y{background:#ffbd2e}.dot.g{background:#27c93f}
+    .term-title{margin-left:10px;font-family:var(--mono);font-size:.78rem;color:var(--txt-dim)}
+    .term-body{padding:28px 26px 34px;font-family:var(--mono);font-size:.95rem}
+    .term-body .ln{margin-bottom:6px;color:var(--txt-dim)}
+    .term-body .pr{color:var(--accent)}
+    .term-body h1{font-family:var(--sans);font-size:clamp(1.9rem,5vw,3rem);
+      color:#fff;margin:14px 0 6px;line-height:1.1}
+    .term-body .role{color:var(--accent);font-size:1.05rem;margin-bottom:18px;font-family:var(--mono)}
+    .typed{color:var(--txt)}
+    .cursor{display:inline-block;width:9px;height:1.05em;background:var(--accent);
+      vertical-align:-2px;animation:blink 1s steps(1) infinite;margin-left:2px}
+    @keyframes blink{50%{opacity:0}}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .chip{font-family:var(--mono);font-size:.76rem;color:var(--accent);
+      border:1px solid var(--accent-dim);border-radius:20px;padding:5px 13px;background:rgba(0,255,156,.04)}
+    .cta{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+    .btn{font-family:var(--mono);font-size:.85rem;padding:11px 20px;border-radius:7px;
+      border:1px solid var(--accent);color:var(--accent);cursor:pointer;background:transparent;transition:.2s}
+    .btn:hover{background:var(--accent);color:#04130c;box-shadow:0 0 22px -4px var(--accent)}
+    .btn.ghost{border-color:var(--border);color:var(--txt-dim)}
+    .btn.ghost:hover{border-color:var(--accent2);color:var(--accent2);background:transparent;box-shadow:none}
+
+    /* Sections */
+    section{padding:80px 0;position:relative;z-index:2}
+    .sec-head{font-family:var(--mono);color:var(--txt-dim);font-size:.85rem;margin-bottom:8px}
+    .sec-head .n{color:var(--accent)}
+    h2{font-size:1.9rem;color:#fff;margin-bottom:28px;font-weight:700}
+    .lead{color:var(--txt-dim);max-width:760px;margin-bottom:8px}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
+    .id-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:22px;font-family:var(--mono);font-size:.84rem}
+    .id-card .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--border)}
+    .id-card .row:last-child{border:none}
+    .id-card .k{color:var(--txt-dim)}.id-card .v{color:var(--accent);text-align:right}
+    .status-live{display:inline-flex;align-items:center;gap:7px}
+    .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,255,156,.5)}70%{box-shadow:0 0 0 9px rgba(0,255,156,0)}100%{box-shadow:0 0 0 0 rgba(0,255,156,0)}}
+
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .skill-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:20px 22px;transition:.25s}
+    .skill-card:hover{border-color:var(--accent-dim);transform:translateY(-3px)}
+    .skill-card h3{font-family:var(--mono);font-size:.92rem;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px}
+    .tag{font-family:var(--mono);font-size:.74rem;background:var(--bg-alt);border:1px solid var(--border);
+      color:var(--txt);padding:4px 10px;border-radius:5px}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:28px}
+    .timeline::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:var(--border)}
+    .tl-item{position:relative;margin-bottom:34px}
+    .tl-item::before{content:'';position:absolute;left:-28px;top:5px;width:14px;height:14px;border-radius:50%;
+      background:var(--bg);border:2px solid var(--accent)}
+    .tl-item .when{font-family:var(--mono);font-size:.76rem;color:var(--accent)}
+    .tl-item h3{color:#fff;font-size:1.1rem;margin:3px 0}
+    .tl-item .org{color:var(--txt-dim);font-size:.9rem;margin-bottom:10px;font-family:var(--mono)}
+    .tl-item ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .tl-item li{position:relative;padding-left:20px;color:var(--txt);font-size:.94rem}
+    .tl-item li::before{content:'▹';position:absolute;left:0;color:var(--accent)}
+
+    /* Certs */
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .cert{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:.25s}
+    .cert:hover{border-color:var(--accent-dim)}
+    .cert .ico{font-size:1.4rem}
+    .cert h4{color:#fff;font-size:.96rem;margin-bottom:3px}
+    .cert .iss{font-family:var(--mono);font-size:.78rem;color:var(--txt-dim)}
+
+    /* Projects */
+    .proj{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:26px;transition:.25s}
+    .proj:hover{border-color:var(--accent-dim);box-shadow:0 18px 40px -22px rgba(0,255,156,.25)}
+    .proj .ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .proj h3{color:#fff;font-size:1.2rem}
+    .proj .ptop a{font-family:var(--mono);font-size:.82rem}
+    .proj ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin:14px 0}
+    .proj li{position:relative;padding-left:20px;font-size:.94rem}
+    .proj li::before{content:'$';position:absolute;left:0;color:var(--accent);font-family:var(--mono)}
+    .proj .pstack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+
+    /* Contact */
+    .contact{text-align:center}
+    .contact h2{margin-bottom:10px}
+    .contact .lead{margin:0 auto 26px}
+    .contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+
+    footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;
+      font-family:var(--mono);font-size:.78rem;color:var(--txt-dim);position:relative;z-index:2}
+    footer .sig{color:var(--accent)}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media(max-width:760px){
+      .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg-alt);
+        flex-direction:column;gap:0;border-bottom:1px solid var(--border)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;border-top:1px solid var(--border)}
+      .menu-btn{display:block}
+      .about-grid{grid-template-columns:1fr}
+      .term-body{padding:22px 18px 28px}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">hrk<span class="c">@</span>sec<span class="c">:~$</span></div>
+        <div class="nav-links" id="navlinks">
+          <a href="#about">./about</a>
+          <a href="#skills">./skills</a>
+          <a href="#experience">./experience</a>
+          <a href="#projects">./projects</a>
+          <a href="#certs">./certs</a>
+          <a href="#contact">./contact</a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">[ menu ]</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="wrap">
+    <section class="hero" id="top">
+      <div class="term">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="term-title">hrithik@melbourne: ~/portfolio</span>
+        </div>
+        <div class="term-body">
+          <div class="ln"><span class="pr">$</span> whoami</div>
+          <h1>Hrithik Kumar Chorwar</h1>
+          <div class="role">Cyber Security Analyst &nbsp;//&nbsp; GRC · ISMS · Penetration Testing</div>
+          <div class="ln"><span class="pr">$</span> cat ./summary.txt</div>
+          <div class="ln" style="color:var(--txt)"><span class="typed" id="typed"></span><span class="cursor"></span></div>
+          <div class="hero-meta">
+            <span class="chip">📍 Melbourne, VIC</span>
+            <span class="chip">🎓 BSc (Hons) First Class</span>
+            <span class="chip">🛡️ ISO/IEC 27001 Associate</span>
+            <span class="chip">⚡ Jr Penetration Tester</span>
+          </div>
+          <div class="cta">
+            <a class="btn" href="#contact">[ contact me ]</a>
+            <a class="btn ghost" href="#projects">[ view projects ]</a>
+            <a class="btn ghost" href="Hrithik_Chorwar_CV.pdf" download>[ download cv ]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap reveal">
+      <div class="sec-head"><span class="n">01.</span> ~/about</div>
+      <h2>Professional Summary</h2>
+      <div class="about-grid">
+        <div>
+          <p class="lead">Results-driven cybersecurity graduate (BSc Hons, First Class) with hands-on experience across security operations, governance / risk / compliance (GRC) and penetration testing.</p>
+          <p class="lead">Skilled in vulnerability assessment and network security testing using Burp Suite, Nmap, Metasploit and Wireshark, and in implementing ISO/IEC 27001 information security management systems (ISMS).</p>
+          <p class="lead">Now based in Melbourne with full Australian working rights, seeking an entry-level SOC / Security Analyst, GRC or IT Support role to strengthen organisational security posture.</p>
+        </div>
+        <div class="id-card">
+          <div class="row"><span class="k">user</span><span class="v">hrithik_chorwar</span></div>
+          <div class="row"><span class="k">role</span><span class="v">Security Analyst</span></div>
+          <div class="row"><span class="k">location</span><span class="v">Melbourne, AU</span></div>
+          <div class="row"><span class="k">clearance</span><span class="v">Full work rights</span></div>
+          <div class="row"><span class="k">focus</span><span class="v">SOC · GRC · PenTest</span></div>
+          <div class="row"><span class="k">status</span><span class="v"><span class="status-live"><span class="pulse"></span>open to work</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="background:var(--bg-alt)">
+    <div class="wrap reveal">
+      <div class="sec-head"><span class="n">02.</span> ~/skills</div>
+      <h2>Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🔍 Security Operations & Monitoring</h3>
+          <div class="tags">
+            <span class="tag">Vulnerability Assessment</span><span class="tag">Network Security Testing</span>
+            <span class="tag">Incident Response</span><span class="tag">Log Analysis</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>⚔️ Penetration Testing Tools</h3>
+          <div class="tags">
+            <span class="tag">Burp Suite</span><span class="tag">Nmap</span><span class="tag">Metasploit</span>
+            <span class="tag">Wireshark</span><span class="tag">Gobuster</span><span class="tag">SQLMap</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>📋 GRC & Frameworks</h3>
+          <div class="tags">
+            <span class="tag">ISO/IEC 27001</span><span class="tag">ISO 9001</span><span class="tag">NIST CSF</span>
+            <span class="tag">SOC 2</span><span class="tag">Risk Assessment</span><span class="tag">Internal Audit</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>💻 Operating Systems</h3>
+          <div class="tags">
+            <span class="tag">Kali Linux</span><span class="tag">Linux</span><span class="tag">Windows</span>
+            <span class="tag">macOS</span><span class="tag">Android</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>☁️ Cloud</h3>
+          <div class="tags">
+            <span class="tag">AWS Cloud Foundations</span><span class="tag">Cloud Operations</span>
+            <span class="tag">Cloud Security Foundations</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>🐍 Programming & Web Security</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Bash</span><span class="tag">JavaScript</span>
+            <span class="tag">OWASP Web App Testing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap reveal">
+      <div class="sec-head"><span class="n">03.</span> ~/experience</div>
+      <h2>Professional Experience</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="when">Apr 2024 – Jul 2024</div>
+          <h3>Cyber Security Consultant</h3>
+          <div class="org">ING Skill Academy</div>
+          <ul>
+            <li>Designed and delivered comprehensive cybersecurity demonstrations across multiple security domains for students and beginners.</li>
+            <li>Conducted detailed training sessions and interactive workshops, improving participants' practical security knowledge and hands-on skills.</li>
+            <li>Communicated complex security concepts clearly to non-technical audiences, building foundational awareness of threats and defences.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="when">Aug 2024 – Dec 2024</div>
+          <h3>ISMS Intern</h3>
+          <div class="org">Nepal Realistic Solutions</div>
+          <ul>
+            <li>Assisted in implementing ISO/IEC 27001 information security management standards across the organisation.</li>
+            <li>Conducted risk assessments and identified security gaps across IT assets and business processes, supporting remediation planning.</li>
+            <li>Participated in internal audits and compliance checks to support ISMS certification readiness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="background:var(--bg-alt)">
+    <div class="wrap reveal">
+      <div class="sec-head"><span class="n">04.</span> ~/projects</div>
+      <h2>Academic Projects</h2>
+      <div class="proj">
+        <div class="ptop">
+          <h3>🔐 DocSecure — Decentralized Document Storage</h3>
+          <a href="https://github.com/hrk18/DocSecure" target="_blank" rel="noopener noreferrer">[ source ↗ ]</a>
+        </div>
+        <p class="lead">A React Native, Ethereum and IPFS based decentralised document management app enabling tamper-proof, on-chain document verification.</p>
+        <ul>
+          <li>Integrated IPFS (Pinata) for decentralised storage, reducing centralised storage dependency by 80% and improving data integrity.</li>
+          <li>Developed smart contracts with Hardhat, achieving sub-3-second local blockchain confirmation for document hash registrations.</li>
+          <li>Implemented public/private visibility controls supporting role-based, user-level document access security.</li>
+        </ul>
+        <div class="pstack">
+          <span class="tag">React Native</span><span class="tag">Ethereum</span><span class="tag">IPFS / Pinata</span>
+          <span class="tag">Solidity</span><span class="tag">Hardhat</span><span class="tag">Smart Contracts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS + EDUCATION -->
+  <section id="certs">
+    <div class="wrap reveal">
+      <div class="sec-head"><span class="n">05.</span> ~/credentials</div>
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert"><span class="ico">⚡</span><div><h4>Jr Penetration Tester</h4><div class="iss">TryHackMe · 2025</div></div></div>
+        <div class="cert"><span class="ico">🛡️</span><div><h4>ISO/IEC 27001 Information Security Associate</h4><div class="iss">SkillFront · 2025</div></div></div>
+        <div class="cert"><span class="ico">🌐</span><div><h4>Network Security Engineer</h4><div class="iss">EC-Council · 2024–Present</div></div></div>
+        <div class="cert"><span class="ico">☁️</span><div><h4>AWS Academy — Cloud Foundations & Security</h4><div class="iss">Cloud Ops · Security · Data Center · ML · 2024–Present</div></div></div>
+      </div>
+
+      <h2 style="margin-top:50px">Education</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="when">2022 – 2025</div>
+          <h3>BSc (Hons) Networking and IT Security — First Class</h3>
+          <div class="org">Islington College (affiliated with London Metropolitan University)</div>
+        </div>
+        <div class="tl-item">
+          <div class="when">2019 – 2021</div>
+          <h3>Higher Secondary (Science) — NEB</h3>
+          <div class="org">National School of Science (NIST), National Examination Board</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:var(--bg-alt)">
+    <div class="wrap reveal contact">
+      <div class="sec-head" style="text-align:center"><span class="n">06.</span> ~/contact</div>
+      <h2>Let's secure something together</h2>
+      <p class="lead">Open to entry-level SOC / Security Analyst, GRC and IT Support roles in Melbourne. Feel free to reach out — my inbox is always open.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn" id="emailBtn" href="#">[ send email ]</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/hrithik-chorwar" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/hrk18" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a id="phoneLink" href="#">Phone ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Designed & built by <span class="sig">Hrithik Kumar Chorwar</span></p>
+      <p style="margin-top:6px">&copy; <span id="yr"></span> · Hardened static site · No trackers · CSP enabled · <a href="./.well-known/security.txt">security.txt</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Obfuscated contact (anti-scrape) — assembled at runtime
+    (function(){
+      var u='hrithikrajnk', d='gmail.com';
+      var mail='mailto:'+u+'@'+d;
+      var eb=document.getElementById('emailBtn'); if(eb) eb.href=mail;
+      var p=['+61','423','398','161'].join(' ');
+      var pl=document.getElementById('phoneLink'); if(pl){pl.href='tel:'+p.replace(/\s/g,'');pl.textContent='Phone ↗';}
+    })();
+
+    // Mobile menu
+    var mb=document.getElementById('menuBtn'), nl=document.getElementById('navlinks');
+    mb.addEventListener('click',function(){nl.classList.toggle('open');});
+    nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');});});
+
+    // Typing effect
+    (function(){
+      var txt="Penetration tester & GRC analyst — turning vulnerabilities into hardened, compliant systems.";
+      var el=document.getElementById('typed'), i=0;
+      function tick(){ if(i<=txt.length){ el.textContent=txt.slice(0,i); i++; setTimeout(tick, 28);} }
+      if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){ tick(); } else { el.textContent=txt; }
+    })();
+
+    // Scroll reveal
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(r){io.observe(r);});
+
+    // Matrix rain
+    (function(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var c=document.getElementById('matrix'), x=c.getContext('2d');
+      var chars="01<>/{}#$%[]ABCDEF0123456789abcdef".split(""), fs=14, cols, drops;
+      function resize(){c.width=innerWidth;c.height=innerHeight;cols=Math.floor(c.width/fs);drops=Array(cols).fill(1);}
+      resize(); addEventListener('resize',resize);
+      function draw(){
+        x.fillStyle='rgba(10,14,20,.08)';x.fillRect(0,0,c.width,c.height);
+        x.fillStyle='#00ff9c';x.font=fs+'px monospace';
+        for(var i=0;i<drops.length;i++){
+          var t=chars[Math.floor(Math.random()*chars.length)];
+          x.fillText(t,i*fs,drops[i]*fs);
+          if(drops[i]*fs>c.height&&Math.random()>.975)drops[i]=0;
+          drops[i]++;
+        }
+      }
+      setInterval(draw,55);
+    })();
+  </script>
+</body>
+</html>
